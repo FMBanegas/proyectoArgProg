@@ -4,19 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.MainActivity">
+
 
     <TextView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingrese dos valores a comparar"
+        android:textSize="25dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="sans-serif-black"
+
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-
-        android:text="Ingrese dos valores a comparar"/>
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/texto2"
@@ -29,19 +31,18 @@
         app:layout_constraintStart_toStartOf="parent"
 
 
-
-
         />
+
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/texto1"
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toTopOf="@+id/texto2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/boton"
@@ -51,7 +52,9 @@
         app:layout_constraintEnd_toEndOf="parent"
 
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/texto" />
+        app:layout_constraintTop_toBottomOf="@id/texto"
+         android:layout_marginTop="20dp"
+         />
 
     <TextView
         android:id="@+id/texto"

@@ -1,4 +1,4 @@
 package com.proyectofinalargprog.model
 
-class Modelo {
+data class Compare (var text1:String, var text2:String, resul:Boolean){
 }

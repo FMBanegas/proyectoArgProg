@@ -1,4 +1,4 @@
-package com.proyectofinalargprog
+package com.proyectofinalargprog.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +13,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+
+
+
 
        // val boton = findViewById<AppCompatButton>(R.id.boton)
         //val texto1 = findViewById<AppCompatEditText>(R.id.texto1)
