@@ -2,12 +2,14 @@ package com.proyectofinalargprog.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.appcompat.widget.AppCompatButton
-import androidx.appcompat.widget.AppCompatEditText
+import androidx.activity.viewModels
 import com.proyectofinalargprog.databinding.ActivityMainBinding
+import com.proyectofinalargprog.viewmodel.VistaModelo
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private val vistaModelo: VistaModelo by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -15,6 +17,13 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
+        vistaModelo.compare.observe(this) {
+            // println("recibimos un nuevo valor de compare $it ")
+            binding.resultado.text = "${if (it.resul) "asd" else "falseee"}"
+        }
+        binding.boton.setOnClickListener {
+            vistaModelo.comparar()
+        }
 
 
 
