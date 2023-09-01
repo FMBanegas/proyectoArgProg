@@ -17,7 +17,7 @@ class VistaModeloUnitTest {
     @get:Rule
     val instantTaskRule = InstantTaskExecutorRule()
 
-        private val dispatcher = StandardTestDispatcher()
+    private val dispatcher = StandardTestDispatcher()
 
     @Before
     fun setup(){
@@ -25,7 +25,6 @@ class VistaModeloUnitTest {
         viewModel= VistaModelo()
 
     }
-
     @After
     fun tearDown(){
         Dispatchers.resetMain()
