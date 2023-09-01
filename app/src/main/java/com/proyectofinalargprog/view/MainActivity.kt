@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import com.proyectofinalargprog.databinding.ActivityMainBinding
 import com.proyectofinalargprog.viewmodel.VistaModelo
-
+import android.util.Log
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private val vistaModelo: VistaModelo by viewModels()
@@ -18,21 +18,19 @@ class MainActivity : AppCompatActivity() {
 
 
         vistaModelo.compare.observe(this) {
-            // println("recibimos un nuevo valor de compare $it ")
-            binding.resultado.text = "${if (it.resul) "asd" else "falseee"}"
+            binding.resultado.text = "${it.resul}"
         }
         binding.boton.setOnClickListener {
-            vistaModelo.comparar()
+
+
+
+            vistaModelo.comparar(binding.texto1.text.toString(), binding.texto2.text.toString())
         }
 
 
 
 
-       // val boton = findViewById<AppCompatButton>(R.id.boton)
-        //val texto1 = findViewById<AppCompatEditText>(R.id.texto1)
-        //val texto2 = findViewById<AppCompatEditText>(R.id.texto2)
 
-       // boton.setOnClickListener {   }
 
     }
 }
